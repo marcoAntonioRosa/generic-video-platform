@@ -1,36 +1,39 @@
-<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
+<header class="p-3 text-bg-dark">
     <div class="container-fluid">
-        <button class="btn">
-            <ng-icon name="bootstrapLayoutSidebarInset" color="white"></ng-icon>
-        </button>
-        <a class="navbar-brand ms-4" href="#">
-            <ng-icon name="bootstrapRocketTakeoff"></ng-icon>
-            MARS
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div class="row">
-                <div class="col-8">
-                    <form class="d-flex ms-auto me-auto" role="search">
-                        <div class="input-group">
-                            <input type="text" class="form-control rounded-start" placeholder="Search"
-                                aria-label="Search" aria-describedby="Search">
-                            <button class="btn btn-outline-secondary rounded-end" type="button">
-                                <ng-icon name="bootstrapSearch" color="white"></ng-icon>
-                            </button>
-                        </div>
-                    </form>
+        <div class="row align-items-center">
+            <div class="col-md-4 d-flex align-items-center">
+                <button class="btn p-0 border-0" aria-label="Toggle Sidebar">
+                    <ng-icon name="bootstrapLayoutSidebarInset" color="white" class="fs-4 mx-3"></ng-icon>
+                </button>
+                <a class="navbar-brand d-flex align-items-center ms-2 fs-4 text-white text-decoration-none" href="#">
+                    <ng-icon name="bootstrapRocketTakeoff" class="me-2"></ng-icon>
+                    MARS
+                </a>
+            </div>
+            <div class="col-md-4">
+                <div class="d-flex align-items-center">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-light" type="button">
+                            <ng-icon name="bootstrapSearch"></ng-icon>
+                        </button>
+                    </div>
+                    <button class="btn p-0 border-0 ms-3" aria-label="Voice Search">
+                        <ng-icon name="bootstrapMic" color="white" class="fs-4"></ng-icon>
+                    </button>
                 </div>
-                <div class="col-4">
-                    <ng-icon name="bootstrapMic" color="white"></ng-icon>
-                    <ng-icon name="bootstrapPlusLg" color="white"></ng-icon>
-                    <ng-icon name="bootstrapBell" color="white"></ng-icon>
-                    <ng-icon name="bootstrapPerson" color="white"></ng-icon>
-                </div>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-end">
+                <button class="btn p-0 border-0">
+                    <ng-icon name="bootstrapPlusLg" color="white" class="fs-4 mx-2"></ng-icon>
+                </button>
+                <button class="btn p-0 border-0">
+                    <ng-icon name="bootstrapBell" color="white" class="fs-4 mx-2"></ng-icon>
+                </button>
+                <button class="btn p-0 border-0">
+                    <ng-icon name="bootstrapPerson" color="white" class="fs-4 mx-2"></ng-icon>
+                </button>
             </div>
         </div>
     </div>
-</nav>
+</header>
