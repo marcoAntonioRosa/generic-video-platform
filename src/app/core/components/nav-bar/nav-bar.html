@@ -4,45 +4,49 @@
             <nav class="navbar flex-grow-1 flex-lg-grow-0" aria-label="Home navigation">
                 <ul class="navbar-nav flex-row">
                     <li>
-                        <button class="btn d-flex" aria-label="Toggle sidebar">
+                        <button class="btn d-flex" aria-label="Toggle sidebar" title="Toggle sidebar">
                             <ng-icon name="bootstrapList" color="white" class="fs-4"></ng-icon>
                         </button>
                     </li>
                     <li>
-                        <a class="d-flex align-items-center ms-2 fs-4 text-white text-decoration-none" href="#">
+                        <a href="#" class="d-flex align-items-center ms-2 fs-4 text-white text-decoration-none"
+                            aria-current="page" aria-label="Home" title="Home">
                             <ng-icon name="bootstrapRocketTakeoff" class="me-2"></ng-icon>
                             MARS
                         </a>
                     </li>
                 </ul>
             </nav>
-            <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
-            <div #collapse="ngbCollapse" [(ngbCollapse)]="isMenuCollapsed" class="collapse navbar-collapse">
+            <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed"
+                [attr.aria-expanded]="!isMenuCollapsed" aria-controls="extraOptions">&#9776;</button>
+            <div id="extraOptions" #collapse="ngbCollapse" [(ngbCollapse)]="isMenuCollapsed"
+                class="collapse navbar-collapse">
                 <form role="search" class="d-flex flex-grow-1 align-items-center mx-5 my-3 my-lg-0">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="submit">
+                        <input type="text" class="form-control" placeholder="Search" aria-label="Search input">
+                        <button class="btn btn-outline-light" type="submit" aria-label="Search" title="Search">
                             <ng-icon name="bootstrapSearch"></ng-icon>
                         </button>
                     </div>
-                    <button class="btn p-0 border-0 d-flex align-self-center ms-3" aria-label="Voice Search">
+                    <button class="btn p-0 border-0 d-flex align-self-center ms-3" aria-label="Voice search"
+                        title="Voice search">
                         <ng-icon name="bootstrapMic" color="white" class="fs-4"></ng-icon>
                     </button>
                 </form>
                 <nav class="navbar justify-content-center" aria-label="User actions">
                     <ul class="navbar-nav flex-row">
                         <li>
-                            <button class="btn d-flex">
+                            <button class="btn d-flex" aria-label="Upload a video" title="Upload a video">
                                 <ng-icon name="bootstrapPlusLg" color="white" class="fs-4"></ng-icon>
                             </button>
                         </li>
                         <li>
-                            <button class="btn d-flex">
+                            <button class="btn d-flex" aria-label="Notifications" title="Notifications">
                                 <ng-icon name="bootstrapBell" color="white" class="fs-4"></ng-icon>
                             </button>
                         </li>
                         <li>
-                            <button class="btn d-flex">
+                            <button class="btn d-flex" aria-label="User options" title="User options">
                                 <ng-icon name="bootstrapPerson" color="white" class="fs-4"></ng-icon>
                             </button>
                         </li>

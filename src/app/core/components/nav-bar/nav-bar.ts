@@ -13,6 +13,5 @@ import { bootstrapList, bootstrapRocketTakeoff, bootstrapSearch, bootstrapMic, b
   styleUrl: './nav-bar.css',
 })
 export class NavBar {
-  isCollapsed = false;
   isMenuCollapsed = true;
 }
