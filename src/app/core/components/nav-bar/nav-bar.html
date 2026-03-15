@@ -1,38 +1,53 @@
-<header class="p-3 text-bg-dark">
+<header class="p-1 text-bg-dark">
     <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-md-4 d-flex align-items-center">
-                <button class="btn p-0 border-0 d-flex align-self-center" aria-label="Toggle Sidebar">
-                    <ng-icon name="bootstrapList" color="white" class="fs-4 mx-3"></ng-icon>
-                </button>
-                <a class="navbar-brand d-flex align-items-center ms-2 fs-4 text-white text-decoration-none" href="#">
-                    <ng-icon name="bootstrapRocketTakeoff" class="me-2"></ng-icon>
-                    MARS
-                </a>
-            </div>
-            <div class="col-md-4">
-                <div class="d-flex align-items-center">
+        <div class="d-flex flex-wrap navbar-expand-lg">
+            <nav class="navbar flex-grow-1 flex-lg-grow-0" aria-label="Home navigation">
+                <ul class="navbar-nav flex-row">
+                    <li>
+                        <button class="btn d-flex" aria-label="Toggle sidebar">
+                            <ng-icon name="bootstrapList" color="white" class="fs-4"></ng-icon>
+                        </button>
+                    </li>
+                    <li>
+                        <a class="d-flex align-items-center ms-2 fs-4 text-white text-decoration-none" href="#">
+                            <ng-icon name="bootstrapRocketTakeoff" class="me-2"></ng-icon>
+                            MARS
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+            <div #collapse="ngbCollapse" [(ngbCollapse)]="isMenuCollapsed" class="collapse navbar-collapse">
+                <form role="search" class="d-flex flex-grow-1 align-items-center mx-5 my-3 my-lg-0">
                     <div class="input-group">
                         <input type="text" class="form-control" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-light" type="button">
+                        <button class="btn btn-outline-light" type="submit">
                             <ng-icon name="bootstrapSearch"></ng-icon>
                         </button>
                     </div>
                     <button class="btn p-0 border-0 d-flex align-self-center ms-3" aria-label="Voice Search">
                         <ng-icon name="bootstrapMic" color="white" class="fs-4"></ng-icon>
                     </button>
-                </div>
-            </div>
-            <div class="col-md-4 d-flex align-items-center justify-content-end">
-                <button class="btn p-0 border-0 d-flex align-self-center">
-                    <ng-icon name="bootstrapPlusLg" color="white" class="fs-4 mx-2"></ng-icon>
-                </button>
-                <button class="btn p-0 border-0 d-flex align-self-center">
-                    <ng-icon name="bootstrapBell" color="white" class="fs-4 mx-2"></ng-icon>
-                </button>
-                <button class="btn p-0 border-0 d-flex align-self-center">
-                    <ng-icon name="bootstrapPerson" color="white" class="fs-4 mx-2"></ng-icon>
-                </button>
+                </form>
+                <nav class="navbar justify-content-center" aria-label="User actions">
+                    <ul class="navbar-nav flex-row">
+                        <li>
+                            <button class="btn d-flex">
+                                <ng-icon name="bootstrapPlusLg" color="white" class="fs-4"></ng-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn d-flex">
+                                <ng-icon name="bootstrapBell" color="white" class="fs-4"></ng-icon>
+                            </button>
+                        </li>
+                        <li>
+                            <button class="btn d-flex">
+                                <ng-icon name="bootstrapPerson" color="white" class="fs-4"></ng-icon>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </div>
