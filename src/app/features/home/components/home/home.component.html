@@ -1,0 +1,11 @@
+<div class="container-fluid pt-3">
+    <div class="d-flex flex-wrap justify-content-center">
+        @for (cat of catLoop; track $index) {
+        <div class="p-1">
+            <a [routerLink]="['/video', $index]" class="text-decoration-none">
+                <app-video-card></app-video-card>
+            </a>
+        </div>
+        }
+    </div>
+</div>
