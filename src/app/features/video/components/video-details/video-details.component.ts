@@ -1,17 +1,11 @@
 import { Component, Input } from '@angular/core';
-import {
-  NgbDropdown,
-  NgbDropdownToggle,
-  NgbDropdownMenu,
-  NgbDropdownItem,
-  NgbDropdownButtonItem
-} from '@ng-bootstrap/ng-bootstrap/dropdown';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { bootstrapHandThumbsUp, bootstrapHandThumbsDown, bootstrapShare, bootstrapBookmarkPlus } from '@ng-icons/bootstrap-icons';
+import { DescriptionComponent } from './description/description.component';
 
 @Component({
   selector: 'app-video-details',
-  imports: [NgIconComponent, NgbDropdown, NgbDropdownToggle, NgbDropdownMenu, NgbDropdownItem, NgbDropdownButtonItem],
+  imports: [NgIconComponent, DescriptionComponent],
   providers: [provideIcons({ bootstrapHandThumbsUp, bootstrapHandThumbsDown, bootstrapShare, bootstrapBookmarkPlus })],
   templateUrl: './video-details.component.html',
   styleUrl: './video-details.component.css',

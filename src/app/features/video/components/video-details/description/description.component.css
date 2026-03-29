@@ -1,0 +1,7 @@
+.accordion-button:not(.collapsed) {
+    color: inherit;
+}
+
+.accordion-button::after {
+    content: none;
+}
