@@ -11,5 +11,7 @@ import { DescriptionComponent } from './description/description.component';
   styleUrl: './video-details.component.css',
 })
 export class VideoDetailsComponent {
-  @Input() videoId: string = ''
+  @Input() videoId: string = '';
+  @Input() amountSubscribers: number = 3.7;
+  protected unitMeasurement: string = 'M';
 }

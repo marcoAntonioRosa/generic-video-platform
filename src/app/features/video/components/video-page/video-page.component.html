@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-7 g-0 mx-4">
-            <app-video [videoId]="videoId"></app-video>
+            <app-video [videoId]="videoId" [title]="videoTitle"></app-video>
             <app-video-details [videoId]="videoId"></app-video-details>
-            <!-- {{comment-section-component}} -->
+            <app-comment-section></app-comment-section>
         </div>
     </div>
 </div>

@@ -1,0 +1,14 @@
+<div class="d-flex align-items-center my-3">
+    <span class="fw-bold me-3">{{commentCount}} Comments</span>
+    <div ngbDropdown class="d-inline-block">
+        <button ngbDropdownToggle id="dropdownBasic1" class="btn btn-outline-info d-flex px-3 rounded-5"
+            aria-label="Sort by" title="Sort by">
+            <ng-icon name="bootstrapFilterLeft" class="me-2 fs-4"></ng-icon>
+            Sort by
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Top</button>
+            <button ngbDropdownItem>New</button>
+        </div>
+    </div>
+</div>

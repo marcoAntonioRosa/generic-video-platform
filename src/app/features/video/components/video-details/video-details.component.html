@@ -1,14 +1,14 @@
-<div class="d-flex align-items-center">
-    <ul class="d-inline-flex list-unstyled flex-grow-1 m-0">
-        <li class="me-3">
-            <h2 class="m-0">Channel name {{videoId}}</h2>
-        </li>
-        <li class="me-3">
-            <button class="btn btn-outline-dark d-flex px-3" aria-label="Subscribe" title="Subscribe">
-                Subscribe
-            </button>
-        </li>
-    </ul>
+<div class="d-flex">
+    <div class="d-inline-flex align-items-center flex-grow-1 m-0">
+        <img src="funky.jpg" alt="Cat" class="rounded-circle">
+        <div class="d-block mx-3">
+            <h5 class="my-0">Channel name {{videoId}}</h5>
+            <small>{{amountSubscribers}}{{unitMeasurement}} subscribers</small>
+        </div>
+        <button class="btn btn-outline-dark d-flex px-3" aria-label="Subscribe" title="Subscribe">
+            Subscribe
+        </button>
+    </div>
     <ul class="d-inline-flex list-unstyled justify-content-end m-0">
         <li class="me-3">
             <div class="btn-group" role="group" aria-label="Like or dislike video">
