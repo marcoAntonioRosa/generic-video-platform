@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import { bootstrapHandThumbsUp, bootstrapHandThumbsDown, bootstrapShare, bootstrapBookmarkPlus } from '@ng-icons/bootstrap-icons';
 import { DescriptionComponent } from './description/description.component';
@@ -10,8 +10,22 @@ import { DescriptionComponent } from './description/description.component';
   templateUrl: './video-details.component.html',
   styleUrl: './video-details.component.css',
 })
-export class VideoDetailsComponent {
+export class VideoDetailsComponent implements OnInit {
   @Input() videoId: string = '';
-  @Input() amountSubscribers: number = 3.7;
-  protected unitMeasurement: string = 'M';
+
+  protected channelName: string = '';
+  protected subscriberAmount: string = '';
+  protected likes: string = '';
+  protected dislikes: string = '';
+  protected views: string = '';
+  protected uploadDate: string = ''
+
+  ngOnInit() {
+    this.channelName = 'Channel name';
+    this.subscriberAmount = '1M'
+    this.likes = '10K'
+    this.dislikes = '0'
+    this.views = '300K'
+    this.uploadDate = '1 week ago';
+  }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   NgbAccordionButton,
   NgbAccordionDirective,
@@ -19,4 +19,7 @@ import {
   templateUrl: './description.component.html',
   styleUrl: './description.component.css',
 })
-export class DescriptionComponent { }
+export class DescriptionComponent {
+  @Input() views: string = '';
+  @Input() uploadDate: string = '';
+}

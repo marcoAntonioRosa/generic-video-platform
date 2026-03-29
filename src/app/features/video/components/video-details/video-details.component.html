@@ -2,8 +2,8 @@
     <div class="d-inline-flex align-items-center flex-grow-1 m-0">
         <img src="funky.jpg" alt="Cat" class="rounded-circle">
         <div class="d-block mx-3">
-            <h5 class="my-0">Channel name {{videoId}}</h5>
-            <small>{{amountSubscribers}}{{unitMeasurement}} subscribers</small>
+            <h5 class="my-0">{{channelName}}</h5>
+            <small>{{subscriberAmount}} subscribers</small>
         </div>
         <button class="btn btn-outline-dark d-flex px-3" aria-label="Subscribe" title="Subscribe">
             Subscribe
@@ -15,12 +15,12 @@
                 <button class="btn btn-outline-success d-flex px-3 rounded-start-5" aria-label="Like the video"
                     title="Like the video">
                     <ng-icon name="bootstrapHandThumbsUp" class="me-2 fs-4"></ng-icon>
-                    23K
+                    {{likes}}
                 </button>
                 <button class="btn btn-outline-danger d-flex px-3 rounded-end-5" aria-label="Dislike the video"
                     title="Dislike the video">
                     <ng-icon name="bootstrapHandThumbsDown" class="me-2 fs-4"></ng-icon>
-                    0
+                    {{dislikes}}
                 </button>
             </div>
         </li>
@@ -38,4 +38,4 @@
         </li>
     </ul>
 </div>
-<app-description></app-description>
+<app-description [views]="views" [uploadDate]="uploadDate"></app-description>
